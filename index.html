@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Topic Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Interactive Topics Quiz</h1>
+      <p class="subtitle">Test your knowledge across mixed categories — good luck! 🎯</p>
+    </header>
+
+    <section id="controls" class="card">
+      <div class="timer">
+        Time remaining: <span id="timerDisplay">--:--</span>
+      </div>
+      <div class="settings">
+        <label for="duration">Quiz duration (seconds):</label>
+        <input id="duration" type="number" min="30" value="120" />
+        <button id="startBtn">Start Quiz</button>
+        <button id="restartBtn" class="hidden">Restart Quiz</button>
+      </div>
+    </section>
+
+    <form id="quizForm" class="card hidden" aria-live="polite">
+      <div id="quizContainer"></div>
+      <div class="actions">
+        <button type="button" id="submitBtn" class="primary">Submit Answers</button>
+      </div>
+    </form>
+
+    <section id="result" class="card hidden" aria-live="polite"></section>
+
+    <footer>
+      <small>Interactive Quiz • Built with HTML, CSS & JavaScript</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
